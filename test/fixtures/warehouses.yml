@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  warehouse_key: 1
+  name: MyString
+  type: 
+  address: MyString
+  city: MyString
+  province: MyString
+  postalcode: MyString
+
+two:
+  warehouse_key: 1
+  name: MyString
+  type: 
+  address: MyString
+  city: MyString
+  province: MyString
+  postalcode: MyString

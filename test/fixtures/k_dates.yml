@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_key: 1
+  fulldate: MyString
+  date_name: MyString
+  day_of_week: 1
+  day_name_of_week: MyString
+  day_of_month: 1
+  weekday_weekend: MyString
+  week_of_year: 1
+  month_name: MyString
+  month_of_year: 1
+  is_last_day_of_month: MyString
+  calendar_quarter: 1
+  calendar_year: 1
+  calendar_year_month: MyString
+  calendar_year_quarter: MyString
+  financial_month_of_year: 1
+  financial_quarter: 1
+  fiscal_year: 1
+  fiscal_year_month: MyString
+  fiscal_year_quarter: MyString
+
+two:
+  date_key: 1
+  fulldate: MyString
+  date_name: MyString
+  day_of_week: 1
+  day_name_of_week: MyString
+  day_of_month: 1
+  weekday_weekend: MyString
+  week_of_year: 1
+  month_name: MyString
+  month_of_year: 1
+  is_last_day_of_month: MyString
+  calendar_quarter: 1
+  calendar_year: 1
+  calendar_year_month: MyString
+  calendar_year_quarter: MyString
+  financial_month_of_year: 1
+  financial_quarter: 1
+  fiscal_year: 1
+  fiscal_year_month: MyString
+  fiscal_year_quarter: MyString

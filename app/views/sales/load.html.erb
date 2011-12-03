@@ -1,0 +1,34 @@
+<%@facts.each do |fact|%>
+    <tr val="<%=fact.id%>">
+        <td class="product-summary" val="<%= fact.Product.id%>">
+            <%= fact.Product.description %>
+        </td>
+        <td class="customer-summary" val="<%= fact.Customer.id%>">
+             <%= fact.Customer.fullname %>
+        </td>
+        <td>
+             <%= fact.Warehouse.name %>
+        </td>
+        <td>
+             <%= fact.Transaction.transaction_description %>
+        </td>
+        <td>
+             <%= fact.shipping_key %>
+        </td>
+        <td>
+             <%= number_to_currency(fact.sale_price, :precision => 2) %>
+        </td>
+        <td>
+             <%= number_to_currency(fact.cost_price,:precision => 2) %>
+        </td>
+        <td>
+             <%= number_to_currency(fact.tax_amount, :precision => 2) %>
+        </td>
+        <td>
+             <%= fact.tax_percent %>
+        </td>
+        <td>
+             <%= fact.free_shipping %>
+        </td>
+    </tr>
+<% end %>

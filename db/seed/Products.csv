@@ -1,0 +1,96 @@
+product_key, sku, description, brand, subcategory, category, department, package_type,
+1,10478516528,Bear necessaity,The North Face,Winter pants,Mens Clothing,Clothing,bag
+2,10787621276,Pink delight,The North Face,Fleece,Womens Clothing,Clothing,plastic
+3,10902455158,Ultralight,The North Face,Shirts,Mens Clothing,Clothing,bag
+4,11184804406,Fast,The North Face,Shirts,Womens Clothing,Clothing,bag
+5,12110895492,Protect,The North Face,Winter Jackets,Kids Clothing,Clothing,bag
+6,13238819791,Sweet Tooth,The North Face,Fleece,Mens Clothing,Clothing,bag
+7,15536655574,Ultra me,The North Face,Winter pants,Womens Clothing,Clothing,bag
+8,16005393282,Steamy Days,The North Face,Winter Jackets,Womens Clothing,Clothing,box
+9,18190926735,Beaver Fever,The North Face,Winter Jackets,Kids Clothing,Clothing,bag
+10,18219318062,Pink delight,The North Face,Ski pants,Kids Clothing,Clothing,bag
+11,18520708993,Good grip,The North Face,Shirts,Mens Clothing,Clothing,bag
+12,18530615161,Sweet Tooth,The North Face,Winter Jackets,Kids Clothing,Clothing,plastic
+13,20716427467,Big Agnes,MEC,Winter tent,Tent,Gear,box
+14,20942119708,Ultra tight,The North Face,Ski pants,Kids Clothing,Clothing,bag
+15,21142958740,heavy duty,MEC,All season,Tent,Clothing,box
+16,21628878100,Lots of Squirrels,The North Face,Dress,Womens Clothing,Clothing,bag
+17,22563048263,Deep wood,MEC,Three seaon,Tent,Gear,plastic bag
+18,22571988726,Sleepy bones,OR,All season,Tent,Gear,plastic bag
+19,22912292741,Spider's web,The North Face,Hat,Kids Clothing,Clothing,bag
+20,24017224597,Bear best,OR,All season,Tent,Gear,plastic bag
+21,24247989491,Yurt to go,Patagonia,Fleece,Womens Clothing,Clothing,bag
+22,25464035081,Yurt to go 2,Patagonia,Fleece,Womens Clothing,Clothing,box
+23,26124581284,Yurt to go ,Patagonia,Fleece,Mens Clothing,Clothing,bag
+24,26231258086,Economy,Patagonia,All season,Sleeping Bag,Gear,plastic box
+25,27746118288,Yurt to go,Patagonia,Fleece,Kids Clothing,Clothing,bag
+26,29500412642,Comform fit,MEC,All season,Sleeping Bag,Gear,box
+27,30646444016,On the go,Patagonia,Fleece,Kids Clothing,Clothing,bag
+28,30789514756,Light Weight,Patagonia,Shirts,Mens Clothing,Clothing,bag
+29,31577090190,Yellow Mellow,Patagonia,Pants,Kids Clothing,Clothing,box
+30,32943352203,Turtle power,Patagonia,Dress,Womens Clothing,Clothing,plastic
+31,33411763259,Yurt to go,Patagonia,Winter Jackets,Mens Clothing,Clothing,bag
+32,34551157058,On the go,Patagonia,Fleece,Womens Clothing,Clothing,box
+33,35932897460,On the go again,Patagonia,Fleece,Womens Clothing,Clothing,box
+34,36530889902,Beaver Fever,Patagonia,Dress,Womens Clothing,Clothing,box
+35,37299042140,Ladybugs,Patagonia,Hat,Kids Clothing,Clothing,bag
+36,37331588167,Buffalo Jerky,Patagonia,Shirts,Womens Clothing,Clothing,bag
+37,38153638546,Lots of space,Patagonia,Fleece,Mens Clothing,Clothing,bag
+38,38418928578,Lots of room,Patagonia,Fleece,Kids Clothing,Clothing,bag
+39,38889160798,Save the Beaver,Patagonia,Dress,Womens Clothing,Clothing,box
+40,40806606950,On the go,Patagonia,Winter pants,Womens Clothing,Clothing,bag
+41,41316998997,Lots of space,Patagonia,Fleece,Kids Clothing,Clothing,bag
+42,43507173902,Goose Gear,Patagonia,Winter ,Sleeping Bag,Gear,box
+43,43992125296,Lots of Squirrels,Patagonia,T-shirt,Womens Clothing,Clothing,bag
+44,44513822387,Speed up,Patagonia,Winter pants,Womens Clothing,Clothing,bag
+45,45903594327,Yurt to go,Patagonia,Winter Jackets,Kids Clothing,Clothing,plastic
+46,46205094999,Green Thing,Patagonia,Men,Snow Shoes,Gear,box
+47,46363852917,Warm  and fluffy,Patagonia,Fleece,Kids Clothing,Clothing,bag
+48,46817560065,Yurt to go 2,Patagonia,Winter Jackets,Womens Clothing,Clothing,bag
+49,48530259240,Climber,Patagonia,Winter pants,Mens Clothing,Clothing,bag
+50,49269095527,Tight Fit,Patagonia,Winter pants,Womens Clothing,Gear,bag
+51,50616533214,Turtle power,Patagonia,T-shirt,Womens Clothing,Clothing,bag
+52,51364643658,Power Chips,Patagonia,Shirts,Womens Clothing,Clothing,bag
+53,51770124461,Yurt to go,Patagonia,Winter Jackets,Womens Clothing,Gear,plastic
+54,54983505685,Salty Corn,Patagonia,Shirts,Womens Clothing,Clothing,bag
+55,55681968175,Red daisy,Patagonia,Dress,Womens Clothing,Clothing,bag
+56,57616381323,Yellow Mellow,Patagonia,Women,Snow Shoes,Gear,plastic box
+57,57986858339,On the go,MEC,Winter Jackets,Womens Clothing,Clothing,box
+58,59015963215,On the go,MEC,Winter Jackets,Mens Clothing,Clothing,bag
+59,59632819867,Moose pick,MEC,Winter pants,Mens Clothing,Clothing,bag
+60,60124066512,Ultra warm,MEC,Gloves,Kids Clothing,Clothing,box
+61,62974321939,Pink Girl,MEC,Kids,Snow Shoes,Gear,plastic bag
+62,63266583692,On the go,MEC,Winter Jackets,Kids Clothing,Clothing,bag
+63,63998140597,Warm  and fluffy,MEC,Fleece,Mens Clothing,Clothing,bag
+64,64758233722,Caribou,MEC,Winter pants,Mens Clothing,Clothing,bag
+65,65053589655,Glacier,MEC,Men,Ski,Gear,plastic box
+66,67177373338,Save the beaver,MEC,Hat,Kids Clothing,Clothing,box
+67,67955177490,Ultra warm,MEC,Gloves,Womens Clothing,Clothing,box
+68,69467630229,Sunny Daisy,MEC,Dress,Womens Clothing,Clothing,bag
+69,69467630292,Sunny Daisy,MEC,Dress,Womens Clothing,Clothing,bag
+70,72031541603,Athletic Drink,MEC,Shirts,Mens Clothing,Clothing,bag
+71,72546822646,Onion Slices,Pharna,Shirts,Womens Clothing,Clothing,bag
+72,73647143564,On the go,Pharna,Fleece,Kids Clothing,Clothing,bag
+73,74695428497,Ice breaker,Pharna,Gloves,Mens Clothing,Clothing,bag
+74,76234081227,Beaver Fever,Pharna,T-shirt,Womens Clothing,Clothing,bag
+75,77016028053,Ultra light,Pharna,Hoodie,Womens Clothing,Clothing,box
+76,77622188316,Pink Girl,Pharna,Pants,Kids Clothing,Clothing,box
+77,78532224693,Speed uo,Pharna,Fleece,Mens Clothing,Clothing,bag
+78,80137872378,Lots of space,Pharna,Winter Jackets,Kids Clothing,Clothing,bag
+79,80323441322,Ice break,Pharna,Winter pants,Womens Clothing,Clothing,bag
+80,82182202597,Clear Refresher,Pharna,Shirts,Mens Clothing,Clothing,bag
+81,82843856143,Fizzy Light,Pharna,Shirts,Mens Clothing,Clothing,bag
+82,83064059009,Fast,Pharna,Men,Ski,Gear,plastic box
+83,84276830332,Lots of space,Pharna,Winter Jackets,Womens Clothing,Clothing,bag
+84,84302852271,Lasagna,Pharna,Shirts,Womens Clothing,Clothing,box
+85,85681418862,Save the Beaver,Pharna,T-shirt,Womens Clothing,Clothing,bag
+86,87476647789,Ice breaker,OR,Gloves,Kids Clothing,Clothing,box
+87,89835195915,Ice break,OR,Winter pants,Mens Clothing,Clothing,bag
+88,90431139333,Fluffy to go,OR,Fleece,Mens Clothing,Clothing,bag
+89,90706287103,Warm  and fluffy,OR,Winter Jackets,Womens Clothing,Gear,box
+90,92028763643,Good grip,OR,Women,Ski,Gear,plastic box
+91,92822703206,Save the whales,OR,Hats,Mens Clothing,Clothing,bag
+92,94794170004,Economy,OR,Hats,Mens Clothing,Clothing,bag
+93,95946398896,Warm  and fluffy,OR,Winter Jackets,Mens Clothing,Clothing,bag
+94,98524228144,Polar delight,OR,Fleece,Womens Clothing,Clothing,bag
+95,99257418302,Light Weight,OR,Kids,Ski,Gear,plastic bag

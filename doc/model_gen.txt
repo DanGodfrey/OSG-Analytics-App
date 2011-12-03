@@ -1,0 +1,13 @@
+rails generate model Ship_Fact order_date_kay:integer ship_date_key:integer expected_ship_date_key:integer expected_arrive_date_key:integer actual_arrive_date_key:integer product_key:integer customer_key:integer warehouse_key:integer transaction_key:integer shipping_key:integer sale_price:float cost_price:float tax_amount:float tax_percent:integer free_shipping:string
+
+rails generate model Customer customer_key:integer fullname:string address:string city:string province:string postalcode:string region:string gender:string dob:string
+
+rails generate model KDate date_key:integer fulldate:string date_name:string day_of_week:integer day_name_of_week:string day_of_month:integer weekday_weekend:string week_of_year:integer month_name:string month_of_year:integer is_last_day_of_month:string calendar_quarter:integer calendar_year:integer calendar_year_month:string calendar_year_quarter:string financial_month_of_year:integer financial_quarter:integer fiscal_year:integer fiscal_year_month:string fiscal_year_quarter:string
+
+rails generate model Product product_key:integer sku:integer description:string brand:string subcategory:string category:string department:string package_type:string
+
+rails generate model Shipment shipping_key:integer invoice_number:integer invoice_total:float shipping_fees:float on_time:integer damage_free:integer
+
+rails generate model Transaction transaction_key:integer transaction_description:string transaction_type:string carrier_name:string carrier_address:string carrier_city:string carrier_province:string
+
+rails generate model Warehouse warehouse_key:integer name:string warhousetype:string address:string city:string province:string postalcode:string

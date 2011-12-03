@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  order_date_kay: 1
+  ship_date_key: 1
+  expected_ship_date_key: 1
+  expected_arrive_date_key: 1
+  actual_arrive_date_key: 1
+  product_key: 1
+  customer_key: 1
+  warehouse_key: 1
+  transaction_key: 1
+  shipping_key: 1
+  sale_price: 1.5
+  cost_price: 1.5
+  tax_amount: 1.5
+  tax_percent: 1
+  free_shipping: MyString
+
+two:
+  order_date_kay: 1
+  ship_date_key: 1
+  expected_ship_date_key: 1
+  expected_arrive_date_key: 1
+  actual_arrive_date_key: 1
+  product_key: 1
+  customer_key: 1
+  warehouse_key: 1
+  transaction_key: 1
+  shipping_key: 1
+  sale_price: 1.5
+  cost_price: 1.5
+  tax_amount: 1.5
+  tax_percent: 1
+  free_shipping: MyString

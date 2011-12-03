@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shipping_key: 1
+  invoice_number: 1
+  invoice_total: 1.5
+  shipping_fees: 1.5
+  on_time: 1
+  damage_free: 1
+
+two:
+  shipping_key: 1
+  invoice_number: 1
+  invoice_total: 1.5
+  shipping_fees: 1.5
+  on_time: 1
+  damage_free: 1

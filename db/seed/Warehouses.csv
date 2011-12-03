@@ -1,0 +1,11 @@
+warehouse_key, name, type, address, city, province, postalcode,
+1,Big Smoky 3,Multi Line,21 Manufacturing Lane,Lachine,QC,H8T 1A1
+2,Main Line 3,Multi Line,44 Manufacturing Lane,Gatineau,QC,J8T 7Y3
+3,Big Smoky,Multi Line,17 Manufacturing Lane,Ottawa,ON,K1G 6A7
+4,Big Smoky 2,Multi Line,19 Manufacturing Lane,Ottawa,ON,K1G 6A7
+5,Little Smoky 2 ,Multi Line,89 Manufacturing Lane,Etobicoke,ON,M8Z 1N1
+6,Little Smoky,Multi Line,87 Manufacturing Lane,Toronto,ON,M8Z 1N1
+7,Special Lines 2,Just In Time,68 Manufacturing Lane,Cambridge,ON,N1R 6S2
+8,Special Lines,Just In Time,66 Manufacturing Lane,Cambridge,ON,N1R 6S2
+9,Main Line 2,Multi Line,42 Manufacturing Lane,Kitchener,ON,N2G 4T4
+10,Main Line,Multi Line,40 Manufacturing Lane,Waterloo,ON,N2G 4T4

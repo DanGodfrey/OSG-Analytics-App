@@ -1,0 +1,5 @@
+transaction_key, transaction_description, transaction_type, carrier_name, carrier_address, carrier_city, carrier_province,
+1,Ground ,Sales,Postal Services,456 Gasoline Alley,Vancouver,BC
+2,Expedient,Sales,Expediters,999 Rubber Road,Quebec,QC
+3,SuperFast,Sales,Expediters,999 Rubber Road,Montreal,QC
+4,SuperSaver,Sales,Postal Services,456 Gasoline Alley,Toronto,ON

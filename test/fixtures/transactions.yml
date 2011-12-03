@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  transaction_key: 1
+  transaction_description: MyString
+  transaction_type: MyString
+  carrier_name: MyString
+  carrier_address: MyString
+  carrier_city: MyString
+  carrier_province: MyString
+
+two:
+  transaction_key: 1
+  transaction_description: MyString
+  transaction_type: MyString
+  carrier_name: MyString
+  carrier_address: MyString
+  carrier_city: MyString
+  carrier_province: MyString

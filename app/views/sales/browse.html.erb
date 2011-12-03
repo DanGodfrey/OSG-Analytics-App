@@ -1,0 +1,136 @@
+<table id="sales">
+    <tr>
+        <th>
+            Product
+        </th>
+        <th>
+            Customer
+        </th>
+        <th>
+            Warehouse
+        </th>
+        <th>
+            Transaction
+        </th>
+        <th>
+            Shipment
+        </th>
+        <th>
+            Sale Price
+        </th>
+        <th>
+            Cost Price
+        </th>
+        <th>
+            Tax Amount
+        </th>
+        <th>
+            Tax Percent
+        </th>
+        <th>
+            Free Shipping?
+        </th>
+    </tr>
+    <%@facts.each do |fact|%>
+        <tr val="<%=fact.id%>">
+            <td class="product-summary" val="<%= fact.Product.id%>">
+                <%= fact.Product.description %>
+            </td>
+            <td class="customer-summary" val="<%= fact.Customer.id%>">
+                 <%= fact.Customer.fullname %>
+            </td>
+            <td>
+                 <%= fact.Warehouse.name %>
+            </td>
+            <td>
+                 <%= fact.Transaction.transaction_description %>
+            </td>
+            <td>
+                 <%= fact.shipping_key %>
+            </td>
+            <td>
+                 <%= number_to_currency(fact.sale_price, :precision => 2) %>
+            </td>
+            <td>
+                 <%= number_to_currency(fact.cost_price,:precision => 2) %>
+            </td>
+            <td>
+                 <%= number_to_currency(fact.tax_amount, :precision => 2) %>
+            </td>
+            <td>
+                 <%= fact.tax_percent %>
+            </td>
+            <td>
+                 <%= fact.free_shipping %>
+            </td>
+        </tr>
+    <% end %>
+</table>
+<div id="product-details" class="hidden">
+</div>
+<div id="customer-details" class="hidden">
+</div>
+
+<script type="text/javascript">
+    var lastFact = <%= @facts.last.id %>;
+    $(function(){
+        function BindPopovers(){
+            $('.product-summary').popover({
+                    trigger:'hover', 
+                    content: function(){
+                        $.ajax({
+                             async: false,
+                             type: 'GET',
+                             url: '/product/' + $(this).attr("val"),
+                             success: function(data) {
+                                   $("#product-details").html(data);
+                             }
+                        });
+                        return $("#product-details").html();
+                    }, 
+                    animation: true,
+                    html: true,
+                    placement: "right",
+                    delayIn: 500,
+                    delayOut: 500,
+            });
+            $('.customer-summary').popover({
+                    trigger:'hover', 
+                    content: function(){
+                        $.ajax({
+                             async: false,
+                             type: 'GET',
+                             url: '/customer/' + $(this).attr("val"),
+                             success: function(data) {
+                                   $("#customer-details").html(data);
+                             }
+                        });
+                        return $("#customer-details").html();
+                    }, 
+                    animation: true,
+                    html: true,
+                    placement: "right",
+                    delayOut: 500,
+            });
+        }
+        $(window).scroll(function() {
+           if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
+               LoadMoreRecords();
+           }
+        });
+        function LoadMoreRecords (){
+     
+            $.ajax({
+                 async: false,
+                 type: 'GET',
+                 url: 'sales/' + lastFact,
+                 success: function(data) {
+                     $("#sales  > tbody:last").append(data);
+                 }
+            });
+            lastFact = $("tr:last").attr("val");
+            BindPopovers();
+        }
+        BindPopovers();
+    });
+</script>

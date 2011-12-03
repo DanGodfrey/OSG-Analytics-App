@@ -1,0 +1,12 @@
+customer_key,fullname,address,city,province,postalcode,region,gender,dob
+1,Ann Sutherland,456 North Street,Montreal,QC,H8T 1A1,East QC,M,27-Apr-54
+2,Annabelle Smith,456 North Street,Montreal,QC,H8T 1A1,South,,18-Jun-72
+3,Applewood,1412 Park Avenue,Gatineau,QC,J8T 7Y3,Capital,F,15-Mar-56
+4,Divine Phalamohlaka,8831 Park Avenue,Kitchener,ON,N2G 4T4,South,F,20-Nov-83
+5,H Chang,268 Suburban Ave,Toronto,ON,M8Z 1N1,Toronto,M,18-Sep-79
+6,Harry Chang,286 Suburban Ave,Toronto,ON,M8Z 1N1,Toronto,M,18-Sep-79
+7,Hongyu Chang,209 Suburban Ave,Toronto,ON,M5V 3C6,Toronto,F,07-Aug-80
+8,J. Sihan,8831 Park Avenue,Kitchener,ON,N2G 4T4,South,F,20-Oct-69
+9,Jane Michalski,1412 Park Avenue,Gatineau,QC,J8T 7Y3,Capital,F,16-Oct-82
+10,Klaas van Dam,6276 Park Avenue,Cambridge,ON,N1R 6S2,South,M,24-Dec-84
+11,O.M. Barack,209 Suburban Ave,Toronto,ON,M5V 3C6,Toronto,M,07-May-46
