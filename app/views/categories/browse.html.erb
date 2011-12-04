@@ -1,0 +1,50 @@
+<table id="category" class="tablesorter">
+<thead> 
+    <tr>
+        <th>
+            Category
+        </th>
+        <th>
+            # Products
+        </th>
+        <th>
+            # Sales
+        </th>
+        <th>
+            Revenue
+        </th>
+    </tr>
+</thead>
+<tbody>  
+    <%@products.each do |product|%>
+        <%catProds = Product.find :all, :conditions => "category = \"" + product.category + "\""%>
+        <%totalSales = 0%>
+        <%totalRevenue = 0%>
+        <%catProds.each do |catProd|%>
+            <%totalSales = totalSales + catProd.ShipFacts.length%>
+            <%catProd.ShipFacts.each do |sale|%>
+                <%totalRevenue = totalRevenue + sale.sale_price%>
+            <%end%>
+        <%end%>
+        <tr>
+            <td>
+                  <a href="/category/<%= product.category %>"><%= product.category %></a>
+            </td>
+            <td>
+                  <%= product.count %>
+            </td>
+            <td>
+                  <%= totalSales %>
+            </td>
+            <td>
+                  <%= number_to_currency(totalRevenue, :precision => 2) %>
+            </td>
+        </tr>
+    <% end %>
+</tbody> 
+</table>
+<script>
+    $(document).ready(function(){
+        $("#category").tablesorter();
+    });
+</script>

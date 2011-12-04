@@ -1,0 +1,74 @@
+<%colorScheme = ["#000000","#2F4E6F","#98B1C4","#E15119","#CCCCCC","#F1EFE2"]%>
+<%male = 0%>
+<%female = 0%>
+<%other = 0%>
+<%age1 = 0%>
+<%age2 = 0%>
+<%age3 = 0%>
+<%age4 = 0%>
+<%age5 = 0%>
+<%@orders.each do |order|%>
+    <%case order.Customer.gender%>
+        <%when "M"%>
+            <%male += 1%>
+        <%when "F"%>
+            <%female += 1%>
+        <%else%>
+            <%other += 1%>
+    <%end%>
+    <%year = order.Customer.dob.to_date.year%>
+    <%if year < 30 %> 
+        <%year4 = "20" + year.to_s%>
+    <%else%> 
+        <%year4 = "19" + year.to_s%>
+    <%end%>
+    <% age = Time.now.to_date.year - year4.to_i %>
+    <%if age < 15%>
+        <%age1 +=1%>
+    <%elsif age < 30%>
+        <%age2 +=1%>
+    <%elsif age < 45%>
+        <%age3 +=1%>
+    <%elsif age < 60%>
+        <%age4 +=1%>
+    <%else%>
+        <%age5+=1%>
+    <%end%>
+<%end%>
+<h1><strong>Customer Demographics</strong></h1>
+<div class="row pies">
+    <div class="span6">
+        <h3>Gender</h3>
+        <span class="inlinesparkline left">
+            <%=male%>,<%=female%>,<%=other%>
+        </span>
+        <div class="pie-legend">
+            <div style="color:<%=colorScheme[0]%>;" >Male</div>
+            <div style="color:<%=colorScheme[1]%>;" >Female</div>
+            <div style="color:<%=colorScheme[2]%>;" >Undisclosed</div>
+         </div>
+    </div>
+    <div class="span6">
+        <h3>Age</h3>
+        <span class="inlinesparkline left">
+            <%=age1%>,<%=age2%>,<%=age3%>,<%=age4%>,<%=age5%>
+        </span>
+        <div class="pie-legend">
+            <div style="color:<%=colorScheme[0]%>;" >0-15</div>
+            <div style="color:<%=colorScheme[1]%>;" >15-30</div>
+            <div style="color:<%=colorScheme[2]%>;" >30-45</div>
+            <div style="color:<%=colorScheme[3]%>;" >45-60</div>
+            <div style="color:<%=colorScheme[4]%>;" >60+</div>
+         </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var colorScheme = ["#000000","#2F4E6F","#98B1C4","#E15119","#CCCCCC","#F1EFE2"];
+    $(document).ready(function(){
+        $.fn.sparkline.defaults.common.type = "pie";
+        $.fn.sparkline.defaults.common.width = "150px";
+        $.fn.sparkline.defaults.common.height = "150px";
+        $.fn.sparkline.defaults.pie.sliceColors = colorScheme;
+        $('.inlinesparkline').sparkline();
+    });
+</script>

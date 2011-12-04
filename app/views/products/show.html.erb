@@ -1,9 +1,83 @@
-<ul>
-    <li><strong>SKU: </strong><%=@product.sku%></li>
-    <li><strong>Description: </strong><%=@product.description%></li>
-    <li><strong>Brand: </strong><%=@product.brand%></li>
-    <li><strong>Department: </strong><%=@product.department%></li>
-    <li><strong>Category: </strong><%=@product.category%></li>
-    <li><strong>Subcategory: </strong><%=@product.subcategory%></li>
-    <li><strong>Packaging: </strong><%=@product.package_type%></li>
-</ul>
+<%colorScheme = ["#000000","#2F4E6F","#98B1C4","#E15119","#CCCCCC","#F1EFE2"]%>
+<h1><strong>SKU: </strong> <%=@product.sku%></h1>
+<div class="prod-details">
+    <ul>
+        <li><strong>Description: </strong><%=@product.description%></li>
+        <li><strong>Brand: </strong><%=@product.brand%></li>
+        <li><strong>Department: </strong><%=@product.department%></li>
+        <li><strong>Category: </strong><%=@product.category%></li>
+        <li><strong>Subcategory: </strong><%=@product.subcategory%></li>
+        <li><strong>Packaging: </strong><%=@product.package_type%></li>
+    </ul>
+</div>
+<div id="large-trend" class="large-graph shadow">
+    
+</div>
+<div class="row pies">
+    <div class="span4">
+        <h3>Region</h3>
+        <span class="inlinesparkline left">
+            <%@product.getRegionSales.each do |sale|%>
+                 <%=sale.count%>,
+             <%end%>
+        </span>
+        <div class="pie-legend">
+            <%@product.getRegionSales.each_with_index do |sale, index|%>
+                 <div style="color:<%=colorScheme[index%5]%>;" ><%=sale.region%></div>
+             <%end%>
+         </div>
+    </div>
+    <div class="span4">
+        <h3>Province</h3>
+        <span class="inlinesparkline left">
+            <%@product.getProvincialSales.each do |sale|%>
+                 <%=sale.count%>,
+             <%end%>
+        </span>
+        <div class="pie-legend">
+            <%@product.getProvincialSales.each_with_index do |sale, index|%>
+                 <div tyle="color:<%=colorScheme[index%5]%>;" ><%=sale.province%></div>
+             <%end%>
+         </div>
+    </div>
+    <div class="span4">
+        <h3>City</h3>
+        <span class="inlinesparkline left">
+                <%@product.getCitySales.each do |sale|%>
+                    <%=sale.count%>,
+                <%end%>
+        </span>
+        <div class="pie-legend">
+            <%@product.getCitySales.each_with_index do |sale, index|%>
+               <div style="color:<%=colorScheme[index%5]%>;"> <%=sale.city%></div>
+             <%end%>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var colorScheme = ["#000000","#2F4E6F","#98B1C4","#E15119","#CCCCCC","#F1EFE2"];
+    $(document).ready(function(){
+        $("#products").tablesorter();
+        $.fn.sparkline.defaults.common.type = "pie";
+        $.fn.sparkline.defaults.common.width = "150px";
+        $.fn.sparkline.defaults.common.height = "150px";
+        $.fn.sparkline.defaults.pie.sliceColors = colorScheme;
+        $('.inlinesparkline').sparkline();
+    });
+    google.load('visualization', '1', {'packages':['annotatedtimeline']});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', '# Of Sales');
+        data.addRows([
+            <%@product.getDailySales.each do |date|%>
+                 [Date.parseExact("<%=date.order_date_kay%>","yyyyMMdd"),<%=date.count%>],
+             <%end%>
+        ]);
+
+        var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('large-trend'));
+        chart.draw(data, {});
+    }
+</script>

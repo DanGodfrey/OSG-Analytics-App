@@ -1,0 +1,45 @@
+<table id="province" class="tablesorter">
+<thead> 
+    <tr>
+        <th>
+            Province
+        </th>
+        <th>
+            # Sales
+        </th>
+        <th>
+            Revenue
+        </th>
+    </tr>
+</thead>
+<tbody>  
+    <%@orders.each do |order|%>
+    <%products = Product.find(
+       :all, 
+       :joins => 'JOIN Ship_Facts ON Products.product_key = ship_facts.product_key JOIN Customers ON Customers.customer_key = ship_facts.customer_key',
+       :select => "ship_facts.sale_price",
+       :conditions => "Customers.province =\"" + order.province + "\"")%>
+        <%totalSales = products.length%>
+        <%totalRevenue = 0%>
+        <%products.each do |prod|%>
+            <%totalRevenue = totalRevenue + prod.sale_price%>
+        <%end%>
+        <tr>
+            <td>
+                  <a href="/province/<%= order.province %>"><%= order.province %></a>
+            </td>
+            <td>
+                  <%= totalSales %>
+            </td>
+            <td>
+                  <%= number_to_currency(totalRevenue, :precision => 2) %>
+            </td>
+        </tr>
+    <% end %>
+</tbody> 
+</table>
+<script>
+    $(document).ready(function(){
+        $("#province").tablesorter();
+    });
+</script>

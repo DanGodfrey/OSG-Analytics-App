@@ -4,8 +4,14 @@
   <title>OSG Analytics</title>
   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
   <%= stylesheet_link_tag "osg" %>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <%= javascript_include_tag "jquery-1.5.2.min" %>
+  <script type="text/javascript" src="http://www.omnipotent.net/jquery.sparkline/1.6/jquery.sparkline.min.js"></script>
   <%= javascript_include_tag "date" %>
+  <%= javascript_include_tag "dropdown" %>
+  <%= javascript_include_tag "tb1" %>
+  <%= javascript_include_tag "tb2" %>
+  <%= javascript_include_tag "tablesort" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -13,9 +19,32 @@
     <div class="topbar">
         <div class="fill">
             <div class="container">
-                <a class="brand" href="#">OSG Analytics</a>
+                <a class="brand" href="/">OSG Analytics</a>
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Browse</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/sales/browse">Sales</a>
+                            </li>
+                            <li>
+                                <a href="/product/browse">Products</a>
+                            </li>
+                            <li>
+                                <a href="/category/browse">Categories</a>
+                            </li>
+                            <li>
+                                <a href="/department/browse">Department</a>
+                            </li>
+                            <li>
+                                <a href="/province/browse">Province</a>
+                            </li>
+                            <li>
+                                <a href="/report/custdemo">Customer Demographic</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

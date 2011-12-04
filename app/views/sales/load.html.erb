@@ -6,14 +6,14 @@
         <td class="customer-summary" val="<%= fact.Customer.id%>">
              <%= fact.Customer.fullname %>
         </td>
-        <td>
+        <td class="warehouse-summary" val="<%= fact.Warehouse.id%>">
              <%= fact.Warehouse.name %>
         </td>
-        <td>
+        <td class="transaction-summary" val="<%= fact.Transaction.id%>">
              <%= fact.Transaction.transaction_description %>
         </td>
-        <td>
-             <%= fact.shipping_key %>
+        <td class="shipment-summary" val="<%=fact.Shipment.id%>">
+             <%= fact.Shipment.shipping_key %>
         </td>
         <td>
              <%= number_to_currency(fact.sale_price, :precision => 2) %>

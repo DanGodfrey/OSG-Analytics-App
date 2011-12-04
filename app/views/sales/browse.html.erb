@@ -1,4 +1,5 @@
 <table id="sales">
+    <thead>
     <tr>
         <th>
             Product
@@ -13,7 +14,7 @@
             Transaction
         </th>
         <th>
-            Shipment
+            Shipment #
         </th>
         <th>
             Sale Price
@@ -31,46 +32,20 @@
             Free Shipping?
         </th>
     </tr>
-    <%@facts.each do |fact|%>
-        <tr val="<%=fact.id%>">
-            <td class="product-summary" val="<%= fact.Product.id%>">
-                <%= fact.Product.description %>
-            </td>
-            <td class="customer-summary" val="<%= fact.Customer.id%>">
-                 <%= fact.Customer.fullname %>
-            </td>
-            <td>
-                 <%= fact.Warehouse.name %>
-            </td>
-            <td>
-                 <%= fact.Transaction.transaction_description %>
-            </td>
-            <td>
-                 <%= fact.shipping_key %>
-            </td>
-            <td>
-                 <%= number_to_currency(fact.sale_price, :precision => 2) %>
-            </td>
-            <td>
-                 <%= number_to_currency(fact.cost_price,:precision => 2) %>
-            </td>
-            <td>
-                 <%= number_to_currency(fact.tax_amount, :precision => 2) %>
-            </td>
-            <td>
-                 <%= fact.tax_percent %>
-            </td>
-            <td>
-                 <%= fact.free_shipping %>
-            </td>
-        </tr>
-    <% end %>
+    </thead>
+    <tbody>
+    </tbody>
 </table>
 <div id="product-details" class="hidden">
 </div>
 <div id="customer-details" class="hidden">
 </div>
-
+<div id="warehouse-details" class="hidden">
+</div>
+<div id="shipment-details" class="hidden">
+</div>
+<div id="transaction-details" class="hidden">
+</div>
 <script type="text/javascript">
     var lastFact = <%= @facts.last.id %>;
     $(function(){
@@ -81,7 +56,7 @@
                         $.ajax({
                              async: false,
                              type: 'GET',
-                             url: '/product/' + $(this).attr("val"),
+                             url: '/product/summary/' + $(this).attr("val"),
                              success: function(data) {
                                    $("#product-details").html(data);
                              }
@@ -112,6 +87,60 @@
                     placement: "right",
                     delayOut: 500,
             });
+            $('.warehouse-summary').popover({
+                    trigger:'hover', 
+                    content: function(){
+                        $.ajax({
+                             async: false,
+                             type: 'GET',
+                             url: '/warehouse/' + $(this).attr("val"),
+                             success: function(data) {
+                                   $("#warehouse-details").html(data);
+                             }
+                        });
+                        return $("#warehouse-details").html();
+                    }, 
+                    animation: true,
+                    html: true,
+                    placement: "right",
+                    delayOut: 500,
+            });
+            $('.shipment-summary').popover({
+                    trigger:'hover', 
+                    content: function(){
+                        $.ajax({
+                             async: false,
+                             type: 'GET',
+                             url: '/shipment/' + $(this).attr("val"),
+                             success: function(data) {
+                                   $("#shipment-details").html(data);
+                             }
+                        });
+                        return $("#shipment-details").html();
+                    }, 
+                    animation: true,
+                    html: true,
+                    placement: "right",
+                    delayOut: 500,
+            });
+            $('.transaction-summary').popover({
+                    trigger:'hover', 
+                    content: function(){
+                        $.ajax({
+                             async: false,
+                             type: 'GET',
+                             url: '/transaction/' + $(this).attr("val"),
+                             success: function(data) {
+                                   $("#transaction-details").html(data);
+                             }
+                        });
+                        return $("#transaction-details").html();
+                    }, 
+                    animation: true,
+                    html: true,
+                    placement: "right",
+                    delayOut: 500,
+            });
         }
         $(window).scroll(function() {
            if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
@@ -123,14 +152,17 @@
             $.ajax({
                  async: false,
                  type: 'GET',
-                 url: 'sales/' + lastFact,
+                 url: '/sales/' + lastFact,
                  success: function(data) {
                      $("#sales  > tbody:last").append(data);
                  }
             });
             lastFact = $("tr:last").attr("val");
             BindPopovers();
+            $("#sales").tablesorter();
         }
         BindPopovers();
+        LoadMoreRecords();
+        $("#sales").tablesorter();
     });
 </script>

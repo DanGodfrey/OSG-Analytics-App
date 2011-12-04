@@ -6,10 +6,22 @@ OsgApp::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
-  match 'browse' => 'sales#browse'
+  match 'sales/browse' => 'sales#browse'
+  match 'product/browse' => 'products#browse'
+  match 'product/summary/:id' => 'products#summary'
   match 'product/:id' => 'products#show'
   match 'customer/:id' => 'customers#show'
+  match 'warehouse/:id' => 'warehouses#show'
+  match 'shipment/:id'  =>  'shipments#show'
+  match 'transaction/:id' => 'transactions#show'
   match 'sales/:id' => 'sales#load'
+  match "category/browse" => 'categories#browse'
+  match "category/:cat" => "categories#show"
+  match "department/browse" => 'departments#browse'
+  match "department/:dep" => "departments#show"
+  match "province/browse" => "provinces#browse"
+  match "province/:prov" => "provinces#show"
+  match "reports/custdemo" => "customers#report"
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

@@ -1,0 +1,7 @@
+<ul>
+    <li><strong>Invoice Number: </strong><%=@shipment.invoice_number%></li>
+    <li><strong>Invoice Total: </strong><%=number_to_currency(@shipment.invoice_total, :precision => 2) %></li>
+    <li><strong>Shipping Fees: </strong><%=number_to_currency(@shipment.shipping_fees, :precision => 2) %></li>
+    <li><strong>On Time?: </strong><%=@shipment.on_time%></li>
+    <li><strong>Damage Free?: </strong><%=@shipment.damage_free%></li>
+</ul>
